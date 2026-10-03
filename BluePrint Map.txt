@@ -1,0 +1,17 @@
+Steps of the work:
+
+1- search and extracts topic links with script NiniSitie Scraper and Analyse.py (i just search سرما خورد)
+result> topics_links.json
+2- extract all comments of them with NiniSitie Scraper and Analyse.py
+result> topics_comments.json
+
+3.send to llm for relevancy of topics (هوای سرد نه بلکه سرماخوردگی)
+topics_comments_with_relevancy_column - Copy.json
+
+4. theme analysis two step: first extract treatments, if not treatmements empty then doctorstance correction
+result > topics_comments_with_llm_theme_analysis_0_623.json
+
+5. Merge topics_comments_with_llm_theme_analysis_0_623.json and topics_comments_with_llm_theme_analysis_from_623_to_1338.json
+result> topics_comments_with_llm_theme_analysis_all - Copy.json
+
+6. filter comments without llm_analysis or treatments = []
